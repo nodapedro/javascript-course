@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class 28 Exercise</title>
+</head>
+<body>
+  <script>
+  const number = prompt('Type a number: ');
+  
+  const newNumber = Number.isNaN(Number(number)) ? number : Number(number);
+
+  const squaredroot = Math.sqrt(newNumber);
+  document.body.innerHTML += `square root of ${newNumber} is ${squaredroot}<br />`;
+
+  const isInt = Number.isInteger(newNumber);
+  document.body.innerHTML += `${newNumber} is an integer: ${isInt}<br />`;
+
+  const isNan = Number.isNaN(newNumber);
+  document.body.innerHTML += `${newNumber} is NaN: ${isNan}<br />`;
+
+  const roundedDown = Math.floor(newNumber);
+  document.body.innerHTML += `${newNumber} rounded down: ${roundedDown}<br />`;
+
+  const roundedUp = Math.ceil(newNumber);
+  document.body.innerHTML += `${newNumber} rounded up: ${roundedUp}<br />`;
+
+  const decimalPlace = newNumber.toFixed(2);
+  document.body.innerHTML += `${newNumber} with two decimal places: ${decimalPlace}<br />`;
+
+  console.log(NaN === NaN)
+  </script>
+</body>
+</html>
