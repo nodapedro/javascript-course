@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    <p>Nome: 
+        <input type="text" id="inputNome">
+    </p>
+    <p>Sobrenome: 
+        <input type="text" id="inputSobrenome">
+    </p>
+    <p>Peso: 
+        <input type="text" id="inputPeso">
+    </p>
+    <p>Altura: 
+        <input type="text" id="inputAltura">
+    </p>
+    <button onclick="storeUserIfo()">Enviar</button>
+
+    <div id="listagemDeUsuario"></div>
+    <script>
+        function getUserInfoInput() {
+            const userInfo = {
+                nome: document.getElementById('inputNome').value,
+                sobrenome: document.getElementById('inputSobrenome').value,
+                peso: document.getElementById('inputPeso').value,
+                altura: document.getElementById('inputAltura').value
+            }
+            
+            displayUserInfo(userInfo)
+
+            return userInfo
+        }
+
+        function storeUserIfo() {
+            users.push(getUserInfoInput())
+
+            console.log(users)
+        }
+
+        function displayUserInfo(user) {
+            const novoParagrafo = document.createElement('p');
+            novoParagrafo.textContent = `${user.nome} ${user.sobrenome} ${user.altura} ${user.peso}`;
+
+            const container = document.getElementById('listagemDeUsuario');
+            container.appendChild(novoParagrafo);
+        }
+
+        let users = [];
+    </script>
+</body>
+</html>
